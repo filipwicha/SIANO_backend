@@ -2,6 +2,8 @@ defmodule SianoWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :siano
 
   socket "/socket", SianoWeb.UserSocket,
+    websocket: [timeout: 45_000],
+    longpoll: false,
     websocket: true,
     longpoll: false
 
